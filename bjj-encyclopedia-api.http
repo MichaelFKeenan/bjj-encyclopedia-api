@@ -1,0 +1,6 @@
+@bjj_encyclopedia_api_HostAddress = http://localhost:5078
+
+GET {{bjj_encyclopedia_api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
