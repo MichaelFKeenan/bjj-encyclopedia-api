@@ -15,6 +15,7 @@ builder.Services.AddCors(options =>
                           //this is needed for post requests, unsure why
                           policy.AllowCredentials();
                           policy.AllowAnyHeader();
+                          policy.AllowAnyMethod();
                       });
 });
 
