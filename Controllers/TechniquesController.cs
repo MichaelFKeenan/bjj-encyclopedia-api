@@ -52,6 +52,7 @@ namespace bjj_encyclopedia_api.Controllers
                 Coach = technique.Coach,
                 Description = technique.Description,
                 Tags = technique.Tags,
+                Attempts = technique.Attempts
             };
 
             await _context.SaveAsync(request);

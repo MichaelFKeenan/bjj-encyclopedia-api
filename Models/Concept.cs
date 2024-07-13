@@ -2,17 +2,14 @@
 
 namespace bjj_encyclopedia_api.Models
 {
-    [DynamoDBTable("BjjTechniques")]
-    public class Technique
+    [DynamoDBTable("BjjConcepts")]
+    public class Concept
     {
         [DynamoDBHashKey("Id")]
         public string? Id { get; set; }
 
         [DynamoDBGlobalSecondaryIndexHashKey("Created")]
         public string? Created { get; set; }
-
-        [DynamoDBProperty("Coach")]
-        public string? Coach { get; set; }
 
         [DynamoDBProperty("Description")]
         public string? Description { get; set; }
@@ -22,15 +19,5 @@ namespace bjj_encyclopedia_api.Models
 
         [DynamoDBProperty("Tags")]
         public List<string>? Tags { get; set; }
-
-        [DynamoDBProperty("Attempts")]
-        public List<TechnniqueAttempt>? Attempts { get; set; }
-    }
-
-    public class TechnniqueAttempt
-    {
-        public bool IsSuccessful { get; set; }
-        public string? Notes { get; set; }
-        public string? Created { get; set; }
     }
 }

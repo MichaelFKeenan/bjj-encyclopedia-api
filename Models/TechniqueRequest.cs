@@ -1,12 +1,9 @@
-﻿using Amazon.DynamoDBv2.DataModel;
-
-namespace bjj_encyclopedia_api.Models
+﻿namespace bjj_encyclopedia_api.Models
 {
-    public class TechniqueRequest
+    public class AttemptRequest
     {
-        public string? Coach { get; set; }
-        public string? Description { get; set; }
-        public string? Name { get; set; }
-        public List<string>? Tags { get; set; }
+        public bool? IsSuccessful { get; set; }
+        public string? Thoughts { get; set; }
+        public string? TechniqueId { get; set; }
     }
 }
